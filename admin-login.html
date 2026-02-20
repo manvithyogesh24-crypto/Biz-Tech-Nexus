@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | CSBS DMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-card">
+      <div class="auth-logos">
+        <img src="assets/images/mitm-logo.jpeg" alt="MIT Mysore Logo" class="hero-logo" />
+        <img src="assets/images/csbs-logo.jpeg" alt="CSBS Logo" class="hero-logo" />
+      </div>
+      <p class="eyebrow">Department Authentication</p>
+      <h1>Admin Login</h1>
+      <p class="section-note">CSBS Mini Digital Management System</p>
+
+      <form id="adminLoginPageForm" class="form-grid" novalidate>
+        <label>Username<input type="text" id="adminLoginUser" required /></label>
+        <label>Password<input type="password" id="adminLoginPass" required /></label>
+        <button class="btn" type="submit">Login to Admin Dashboard</button>
+        <p class="section-note">Use: <code>admin</code> / <code>csbs2026</code></p>
+        <p id="adminLoginPageMessage" aria-live="polite"></p>
+      </form>
+
+      <div class="auth-links">
+        <a href="student-login.html">Student Login</a>
+        <a href="index.html">Public Portal</a>
+        <a href="prototype.html">Prototype Hub</a>
+        <a href="landing.html">Landing Page</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-grid">
+      <div class="site-footer-brand">
+        <h3>BIZ TECH NEXUS</h3>
+        <p>Secure admin authentication gateway for CSBS department operations.</p>
+      </div>
+      <div>
+        <h4>ABOUT</h4>
+        <ul>
+          <li><a href="index.html#overview">Overview</a></li>
+          <li><a href="index.html#notices">Notices</a></li>
+          <li><a href="index.html#events">Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>SUPPORT</h4>
+        <ul>
+          <li><a href="student-login.html">Student Login</a></li>
+          <li><a href="prototype.html">Prototype Hub</a></li>
+          <li><a href="index.html">Main Portal</a></li>
+          <li><a href="landing.html">Landing Page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <ul>
+          <li>Email: csbs@mitmysore.edu.in</li>
+          <li><a href="https://www.linkedin.com/company/csbs-mitm/" target="_blank" rel="noopener noreferrer">LinkedIn: csbs-mitm</a></li>
+          <li><a href="https://www.instagram.com/csbs_fam" target="_blank" rel="noopener noreferrer">Instagram: @csbs_fam</a></li>
+          <li>Phone: +91 821 297 2000</li>
+        </ul>
+      </div>
+    </div>
+    <p class="site-footer-copy">INNOVATE | INTEGRATE | ELEVATE</p>
+  </footer>
+
+  <script src="assets/js/data-store.js"></script>
+  <script src="assets/js/login.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard | CSBS DMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <main class="student-shell">
+    <section class="panel">
+      <div class="dashboard-head">
+        <div>
+          <p class="eyebrow">CSBS Student Portal</p>
+          <h1>Student Dashboard</h1>
+        </div>
+        <div class="header-links">
+          <a class="btn-link" href="index.html">Public Portal</a>
+          <a class="btn-link" href="prototype.html">Prototype Hub</a>
+          <a class="btn-link" href="landing.html">Landing Page</a>
+          <button id="studentLogoutBtn" class="btn" type="button">Logout</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div id="studentProfileCard"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Quick Access</h2>
+      <div class="quick-nav">
+        <a href="index.html#notices">Notice Board</a>
+        <a href="index.html#events">Upcoming Events</a>
+        <a href="index.html#faculty">Faculty Profiles</a>
+        <a href="index.html#achievements">Achievements</a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Classmates (Same Year)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>USN</th>
+              <th>Year</th>
+              <th>Section</th>
+              <th>Placement</th>
+            </tr>
+          </thead>
+          <tbody id="studentPeersTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-grid">
+      <div class="site-footer-brand">
+        <h3>BIZ TECH NEXUS</h3>
+        <p>Student portal for academic updates, events, and department resources.</p>
+      </div>
+      <div>
+        <h4>ABOUT</h4>
+        <ul>
+          <li><a href="index.html#students">Student Listing</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="index.html#notices">Notice Board</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>SUPPORT</h4>
+        <ul>
+          <li><a href="student-login.html">Student Login</a></li>
+          <li><a href="admin-login.html">Admin Login</a></li>
+          <li><a href="prototype.html">Prototype Hub</a></li>
+              <li><a href="landing.html">Landing Page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <ul>
+          <li>Email: csbs@mitmysore.edu.in</li>
+          <li><a href="https://www.linkedin.com/company/csbs-mitm/" target="_blank" rel="noopener noreferrer">LinkedIn: csbs-mitm</a></li>
+          <li><a href="https://www.instagram.com/csbs_fam" target="_blank" rel="noopener noreferrer">Instagram: @csbs_fam</a></li>
+          <li>Phone: +91 821 297 2000</li>
+        </ul>
+      </div>
+    </div>
+    <p class="site-footer-copy">INNOVATE | INTEGRATE | ELEVATE</p>
+  </footer>
+
+  <script src="assets/js/data-store.js"></script>
+  <script src="assets/js/student.js"></script>
+</body>
+</html>
+
+
+

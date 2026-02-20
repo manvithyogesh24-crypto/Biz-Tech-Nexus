@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSBS Department Digital Management System | MIT Mysore</title>
+  <meta name="description" content="Official CSBS Department Mini Digital Management System prototype for MIT Mysore." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div id="scrollProgress" class="scroll-progress"></div>
+  <div class="bg-blob blob-a"></div>
+  <div class="bg-blob blob-b"></div>
+  <div class="glass-orb orb-c"></div>
+
+  <div id="splashScreen" class="splash-screen hidden" role="dialog" aria-modal="true" aria-label="Welcome splash">
+    <section class="splash-wrap">
+      <section class="hero-banner">
+        <div class="hero-logo-wrap">
+          <img src="assets/images/mitm-logo.jpeg" alt="MIT Mysore Logo" class="hero-logo" />
+          <div class="hero-title-block">
+            <p class="hero-kicker">Full Module Prototype</p>
+            <h2>BIZ TECH NEXUS</h2>
+            <p class="hero-sub">CSBS Mini Digital Management System Prototype Hub</p>
+          </div>
+          <img src="assets/images/csbs-logo.jpeg" alt="CSBS Department Logo" class="hero-logo" />
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>All Prototype Modules</h2>
+          <button id="enterHomeBtn" class="btn" type="button">Open Main Portal</button>
+        </div>
+        <div class="prototype-grid">
+          <article class="proto-card"><h3>Public Landing Prototype</h3><p>Home, notices, events, faculty, students, achievements.</p></article>
+          <article class="proto-card"><h3>Admin Login Prototype</h3><p>Frontend-only authentication for admin workflow.</p></article>
+          <article class="proto-card"><h3>Admin CRUD Prototype</h3><p>Manage notices, events, students, faculty, achievements.</p></article>
+          <article class="proto-card"><h3>Student Login Prototype</h3><p>Student authentication using name and USN mapping.</p></article>
+          <article class="proto-card"><h3>Student Dashboard Prototype</h3><p>Student profile and same-year classmates view.</p></article>
+          <article class="proto-card"><h3>Faculty Detail Prototype</h3><p>Faculty profile details and department navigation links.</p></article>
+        </div>
+      </section>
+    </section>
+  </div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="side-brand">
+        <img src="assets/images/csbs-logo.jpeg" alt="CSBS Department Logo" class="brand-logo side" />
+        <div>
+          <p class="eyebrow">MIT Mysore</p>
+          <h2>CSBS DMS</h2>
+        </div>
+      </div>
+
+      <nav class="side-nav">
+        <a href="#home">Home</a>
+        <a href="#overview">Overview</a>
+        <a href="#notices">Notices</a>
+        <a href="#students">Students</a>
+        <a href="#events">Events</a>
+        <a href="#faculty">Faculty</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#gallery">Gallery</a>
+        <a href="prototype.html">Prototype Hub</a>
+      </nav>
+
+      <div class="side-card">
+        <img src="assets/images/csbs-logo.jpeg" alt="CSBS Department Logo" class="brand-logo side" />
+        <p>Frontend simulation with CRUD-enabled admin panel.</p>
+        <a class="btn-link side-btn" href="admin-login.html">Admin Login</a>
+        <a class="btn-link side-btn" href="student-login.html">Student Login</a>
+        <a class="btn-link side-btn" href="prototype.html">All Prototype</a>
+        <a class="btn-link side-btn" href="landing.html">Landing Page</a>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <section id="home" class="hero-banner reveal">
+        <div class="hero-logo-wrap">
+          <img src="assets/images/mitm-logo.jpeg" alt="MIT Mysore Logo" class="hero-logo" />
+          <div class="hero-title-block">
+            <p class="hero-kicker">Department Digital Platform</p>
+            <h2>BIZ-TECH NEXUS</h2>
+            <p class="hero-sub">Computer Science and Business System | MIT Mysore</p>
+          </div>
+          <img src="assets/images/csbs-logo.jpeg" alt="CSBS Department Logo" class="hero-logo" />
+        </div>
+      </section>
+
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Maharaja Institute of Technology Mysore</p>
+          <h1>Department of Computer Science and Business Systems</h1>
+        </div>
+        <div class="top-actions">
+          <input id="globalSearch" type="text" placeholder="Quick search student name or USN..." />
+          <nav class="quick-nav" aria-label="Quick navigation">
+            <a href="#home">Home</a>
+            <a href="#overview">Overview</a>
+            <a href="#notices">Notices</a>
+            <a href="#students">Students</a>
+            <a href="#events">Events</a>
+            <a href="#faculty">Faculty</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#gallery">Gallery</a>
+            <a href="prototype.html">Prototype</a>
+            <a href="landing.html">Landing</a>
+          </nav>
+        </div>
+      </header>
+
+      <section id="overview" class="panel reveal overview-panel">
+        <div class="panel-head">
+          <h2>Department Overview</h2>
+          <span class="tag">Public Landing Panel</span>
+        </div>
+        <p class="section-note">Structured interface for notices, events, faculty profiles, student records, and achievements.</p>
+        <div class="vision-grid">
+          <article>
+            <h3>Vision</h3>
+            <p>To be the premier source that provides a transformative education to create computer professionals, competent entrepreneurs & technocrats to meet the global challenges.</p>
+          </article>
+          <article>
+            <h3>Mission</h3>
+            <p>To facilitate students to nurture skills to practice their professions competently to meet the ever-changing needs of society & environment.</p>
+            <p>To develop the potential of human resources with new ideas, research to meet the requirements of cutting edge technology.</p>
+          </article>
+        </div>
+        <div id="summaryCards" class="summary-grid"></div>
+      </section>
+
+      <section class="panel-grid reveal">
+        <section id="notices" class="panel">
+          <div class="panel-head">
+            <h2>Notice Board</h2>
+            <span class="tag">Latest Highlighted</span>
+          </div>
+          <div id="noticeBoard" class="notice-list"></div>
+        </section>
+
+        <section id="achievements" class="panel">
+          <div class="panel-head">
+            <h2>Achievements</h2>
+            <span class="tag">Academic + Placement</span>
+          </div>
+          <div class="achievement-columns">
+            <article>
+              <h3>Student Achievements</h3>
+              <ul id="studentAchievementList" class="achievement-list"></ul>
+            </article>
+            <article>
+              <h3>Faculty Achievements</h3>
+              <ul id="facultyAchievementList" class="achievement-list"></ul>
+            </article>
+            <article>
+              <h3>Placement Highlights</h3>
+              <ul id="placementAchievementList" class="achievement-list"></ul>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section id="gallery" class="panel reveal">
+        <div class="panel-head">
+          <h2>Gallery</h2>
+          <span class="tag">Department Activities</span>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <img src="assets/images/gallery/gallery-01.jpeg" alt="Department activity moment" loading="lazy" />
+            <p>CSBS activity snapshot highlighting interface and module presentation.</p>
+          </article>
+          <article class="gallery-card">
+            <img src="assets/images/gallery/gallery-02.jpeg" alt="Student industrial visit group photo" loading="lazy" />
+            <p>Students and faculty during academic industrial engagement visit.</p>
+          </article>
+          <article class="gallery-card">
+            <img src="assets/images/gallery/gallery-03.jpeg" alt="Student heritage visit group photo" loading="lazy" />
+            <p>Department field visit conducted for experiential and collaborative learning.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="students" class="panel reveal">
+        <div class="panel-head">
+          <h2>Student Listing</h2>
+          <span class="tag">Year Filter + Search</span>
+        </div>
+        <div class="filter-row">
+          <label>
+            Year
+            <select id="yearFilter">
+              <option value="all">All Years</option>
+              <option value="1">1st Year</option>
+              <option value="2">2nd Year</option>
+              <option value="3">3rd Year</option>
+              <option value="4">4th Year</option>
+            </select>
+          </label>
+          <label>
+            Search
+            <input type="text" id="studentSearch" placeholder="Search by name or USN" />
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>USN</th>
+                <th>Year</th>
+                <th>Section</th>
+                <th>Placement Status</th>
+              </tr>
+            </thead>
+            <tbody id="studentTableBody"></tbody>
+          </table>
+        </div>
+        <p id="placementSummary" class="section-note"></p>
+      </section>
+
+      <section id="events" class="panel reveal">
+        <div class="panel-head">
+          <h2>Upcoming Events</h2>
+          <span class="tag">Registration Enabled</span>
+        </div>
+        <div id="eventList" class="event-grid"></div>
+
+        <h3 class="subhead">Event Registration Form</h3>
+        <form id="eventRegistrationForm" class="form-grid" novalidate>
+          <label>Full Name<input type="text" id="regName" required /></label>
+          <label>Email<input type="email" id="regEmail" required /></label>
+          <label>Phone Number<input type="tel" id="regPhone" required /></label>
+          <label>Select Event<select id="regEvent" required></select></label>
+          <label>Event Type
+            <select id="regCategory" required>
+              <option value="">Select event type</option>
+              <option value="Technical">Technical</option>
+              <option value="Non-Technical">Non-Technical</option>
+              <option value="Sports">Sports</option>
+              <option value="Cultural">Cultural</option>
+            </select>
+          </label>
+          <button type="submit" class="btn">Submit Registration</button>
+          <p id="registrationMessage" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="faculty" class="panel reveal">
+        <div class="panel-head">
+          <h2>Faculty Profiles</h2>
+          <span class="tag">Grid + Detail View</span>
+        </div>
+        <div class="faculty-layout">
+          <div id="facultyGrid" class="faculty-grid"></div>
+          <aside id="facultySpotlight" class="faculty-spotlight"></aside>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="site-footer-grid">
+          <div class="site-footer-brand">
+            <h3>BIZ TECH NEXUS</h3>
+            <p>CSBS Department digital platform for notices, events, academics, and student services.</p>
+          </div>
+          <div>
+            <h4>ABOUT</h4>
+            <ul>
+              <li><a href="#overview">Department Overview</a></li>
+              <li><a href="#faculty">Faculty Profiles</a></li>
+              <li><a href="#achievements">Achievements</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>LEGAL</h4>
+            <ul>
+              <li><a href="prototype.html">Prototype Policy</a></li>
+              <li><a href="prototype.html">Terms of Use</a></li>
+              <li><a href="prototype.html">Data Usage</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>SUPPORT</h4>
+            <ul>
+              <li><a href="admin-login.html">Admin Help</a></li>
+              <li><a href="student-login.html">Student Help</a></li>
+              <li><a href="prototype.html">Module Guide</a></li>
+              <li><a href="landing.html">Landing Page</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>CONTACT</h4>
+            <ul>
+              <li>Email: csbs@mitmysore.edu.in</li>
+              <li><a href="https://www.linkedin.com/company/csbs-mitm/" target="_blank" rel="noopener noreferrer">LinkedIn: csbs-mitm</a></li>
+              <li><a href="https://www.instagram.com/csbs_fam" target="_blank" rel="noopener noreferrer">Instagram: @csbs_fam</a></li>
+              <li>Phone: +91 821 297 2000</li>
+              <li>Belawadi, Mysuru, Karnataka</li>
+            </ul>
+          </div>
+        </div>
+        <p class="site-footer-copy">INNOVATE | INTEGRATE | ELEVATE</p>
+      </footer>
+    </main>
+  </div>
+
+  <div id="eventModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
+    <div class="modal-content">
+      <button id="closeEventModal" class="modal-close" type="button" aria-label="Close event details">X</button>
+      <h3 id="eventModalTitle"></h3>
+      <p id="eventModalMeta" class="event-meta"></p>
+      <p id="eventModalDescription"></p>
+    </div>
+  </div>
+
+  <div id="galleryModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle">
+    <div class="modal-content gallery-modal-content">
+      <button id="closeGalleryModal" class="modal-close" type="button" aria-label="Close gallery preview">X</button>
+      <h3 id="galleryModalTitle">Gallery Preview</h3>
+      <img id="galleryModalImage" src="" alt="Gallery preview" />
+      <p id="galleryModalCaption" class="event-meta"></p>
+    </div>
+  </div>
+
+  <script src="assets/js/data-store.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+

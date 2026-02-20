@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSBS Admin Dashboard | MIT Mysore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header compact">
+    <div class="brand-row">
+      <img src="assets/images/mitm-logo.jpeg" alt="MIT Mysore Logo" class="brand-logo small" />
+      <div class="brand-text">
+        <p class="eyebrow">CSBS Digital Management System</p>
+        <h1>Admin Dashboard (Frontend Simulation)</h1>
+      </div>
+      <div class="header-links">
+        <a class="btn-link" href="index.html">Public View</a>
+        <a class="btn-link" href="student-login.html">Student Login</a>
+        <a class="btn-link" href="prototype.html">Prototype Hub</a>
+        <a class="btn-link" href="landing.html">Landing Page</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="loginSection" class="panel admin-panel">
+      <h2>Admin Login</h2>
+      <form id="loginForm" class="form-grid" novalidate>
+        <label>Username<input type="text" id="adminUser" required /></label>
+        <label>Password<input type="password" id="adminPass" required /></label>
+        <button type="submit" class="btn">Login</button>
+        <p class="section-note">Use: <code>admin</code> / <code>csbs2026</code></p>
+        <p id="loginMessage" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="dashboardSection" class="panel admin-panel hidden">
+      <div class="dashboard-head">
+        <h2>Dashboard Controls</h2>
+        <button id="logoutBtn" class="btn">Logout</button>
+      </div>
+      <div id="adminSummaryCards" class="summary-grid"></div>
+
+      <div class="admin-grid">
+        <article>
+          <h3>Manage Notices</h3>
+          <form id="noticeForm" class="form-grid compact" novalidate>
+            <input type="hidden" id="noticeId" />
+            <label>Title<input type="text" id="noticeTitle" required /></label>
+            <label>Date<input type="date" id="noticeDate" required /></label>
+            <label>Description<textarea id="noticeDescription" rows="3" required></textarea></label>
+            <button type="submit" class="btn">Save Notice</button>
+          </form>
+          <div id="noticeAdminList" class="admin-list"></div>
+        </article>
+
+        <article>
+          <h3>Manage Events</h3>
+          <form id="eventForm" class="form-grid compact" novalidate>
+            <input type="hidden" id="eventId" />
+            <label>Title<input type="text" id="eventTitle" required /></label>
+            <label>Date<input type="date" id="eventDate" required /></label>
+            <label>Venue<input type="text" id="eventVenue" required /></label>
+            <label>Description<textarea id="eventDescription" rows="3" required></textarea></label>
+            <button type="submit" class="btn">Save Event</button>
+          </form>
+          <div id="eventAdminList" class="admin-list"></div>
+        </article>
+
+        <article>
+          <h3>Manage Students</h3>
+          <form id="studentForm" class="form-grid compact" novalidate>
+            <input type="hidden" id="studentId" />
+            <label>Name<input type="text" id="studentName" required /></label>
+            <label>USN<input type="text" id="studentUsn" required /></label>
+            <label>Year
+              <select id="studentYear" required>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+              </select>
+            </label>
+            <label>Section<input type="text" id="studentSection" required /></label>
+            <label>Placement
+              <select id="studentPlacement" required>
+                <option value="Placed">Placed</option>
+                <option value="Internship">Internship</option>
+                <option value="Preparing">Preparing</option>
+              </select>
+            </label>
+            <button type="submit" class="btn">Save Student</button>
+          </form>
+          <div id="studentAdminList" class="admin-list"></div>
+        </article>
+
+        <article>
+          <h3>Manage Faculty</h3>
+          <form id="facultyForm" class="form-grid compact" novalidate>
+            <input type="hidden" id="facultyId" />
+            <label>Name<input type="text" id="facultyName" required /></label>
+            <label>Designation<input type="text" id="facultyDesignation" required /></label>
+            <label>Specialization<input type="text" id="facultySpecialization" required /></label>
+            <label>Email<input type="email" id="facultyEmail" required /></label>
+            <label>Qualification<input type="text" id="facultyQualification" /></label>
+            <label>Experience<input type="text" id="facultyExperience" /></label>
+            <label>Courses<input type="text" id="facultyCourses" /></label>
+            <label>Profile<textarea id="facultyProfile" rows="3"></textarea></label>
+            <label>Image URL<input type="text" id="facultyImage" placeholder="assets/images/faculty/faculty-01.jpg" /></label>
+            <button type="submit" class="btn">Save Faculty</button>
+          </form>
+          <div id="facultyAdminList" class="admin-list"></div>
+        </article>
+
+        <article>
+          <h3>Manage Achievements</h3>
+          <form id="achievementForm" class="form-grid compact" novalidate>
+            <input type="hidden" id="achievementId" />
+            <label>Category
+              <select id="achievementCategory" required>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+                <option value="placement">Placement</option>
+              </select>
+            </label>
+            <label>Title<input type="text" id="achievementTitle" required /></label>
+            <label>Description<textarea id="achievementDescription" rows="3" required></textarea></label>
+            <button type="submit" class="btn">Save Achievement</button>
+          </form>
+          <div id="achievementAdminList" class="admin-list"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-grid">
+      <div class="site-footer-brand">
+        <h3>BIZ TECH NEXUS</h3>
+        <p>Administrative control center for department records and module management.</p>
+      </div>
+      <div>
+        <h4>ABOUT</h4>
+        <ul>
+          <li><a href="index.html#overview">Department Overview</a></li>
+          <li><a href="index.html#notices">Notice Board</a></li>
+          <li><a href="index.html#events">Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>SUPPORT</h4>
+        <ul>
+          <li><a href="admin-login.html">Admin Login</a></li>
+          <li><a href="student-login.html">Student Login</a></li>
+          <li><a href="prototype.html">Prototype Hub</a></li>
+              <li><a href="landing.html">Landing Page</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <ul>
+          <li>Email: csbs@mitmysore.edu.in</li>
+          <li><a href="https://www.linkedin.com/company/csbs-mitm/" target="_blank" rel="noopener noreferrer">LinkedIn: csbs-mitm</a></li>
+          <li><a href="https://www.instagram.com/csbs_fam" target="_blank" rel="noopener noreferrer">Instagram: @csbs_fam</a></li>
+          <li>Phone: +91 821 297 2000</li>
+        </ul>
+      </div>
+    </div>
+    <p class="site-footer-copy">INNOVATE | INTEGRATE | ELEVATE</p>
+  </footer>
+
+  <script src="assets/js/data-store.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
+
+
+
